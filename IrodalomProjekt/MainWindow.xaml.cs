@@ -122,7 +122,12 @@ namespace IrodalomProjekt
 
         private void KilepesClick(object sender, RoutedEventArgs e)
         {
+            var result = MessageBox.Show("Biztosan ki akarsz lépni?", "Kilépés", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
         }
 
         private void ElozoClick(object sender, RoutedEventArgs e)
