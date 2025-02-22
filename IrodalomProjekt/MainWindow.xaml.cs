@@ -150,7 +150,34 @@ namespace IrodalomProjekt
 
         private void ValaszMenteseClick(object sender, RoutedEventArgs e)
         {
+            if (kerdesek.Count == 0 || aktualisIndex < 0 || aktualisIndex >= kerdesek.Count)
+            {
+                MessageBox.Show("Nincs aktív kérdés, amit el lehetne menteni");
+                return;
+            }
 
+            Kerdes aktKerdes = kerdesek[aktualisIndex];
+
+            if (ValaszA.IsChecked == true)
+            {
+                aktKerdes.FelhasznaloValasza = aktKerdes.ValaszA;
+            }
+            else if (ValaszB.IsChecked == true)
+            {
+                aktKerdes.FelhasznaloValasza = aktKerdes.ValaszB;
+            }
+            else if (ValaszC.IsChecked == true)
+            {
+                aktKerdes.FelhasznaloValasza = aktKerdes.ValaszC;
+            }
+            else
+            {
+                MessageBox.Show("Nincs kiválasztott válasz!");
+                return;
+            }
+
+            MessageBox.Show("Válasz elmentve!", "Mentés");
         }
+
     }
 }
