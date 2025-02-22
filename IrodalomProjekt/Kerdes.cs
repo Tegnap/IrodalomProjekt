@@ -8,6 +8,16 @@ namespace IrodalomProjekt
 {
     internal class Kerdes
     {
+
+        public Kerdes(string kerdesSzoveg, string valaszA, string valaszB, string valaszC, string helyesValasz)
+        {
+            KerdesSzoveg = kerdesSzoveg;
+            ValaszA = valaszA;
+            ValaszB = valaszB;
+            ValaszC = valaszC;
+            HelyesValasz = helyesValasz;
+        }
+
         public string KerdesSzoveg { get; set; }
 
         public string ValaszA { get; set; }
@@ -19,5 +29,10 @@ namespace IrodalomProjekt
         public string HelyesValasz { get; set; }
 
         public string FelhasznaloValasza { get; set; }
+
+        public bool ValaszEllenorzes()
+        {
+            return FelhasznaloValasza is null ? false : FelhasznaloValasza.ToLower() == HelyesValasz.ToLower();
+        }
     }
 }
