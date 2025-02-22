@@ -74,6 +74,11 @@ namespace IrodalomProjekt
             }
         }
 
+        private void MutatKerdes(int aktualisIndex)
+        {
+            throw new NotImplementedException();
+        }
+
         private void KiertekelesClick(object sender, RoutedEventArgs e)
         {
 
