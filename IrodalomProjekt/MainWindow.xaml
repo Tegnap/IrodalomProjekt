@@ -34,5 +34,40 @@
                     Click="KilepesClick"/>
             <TextBlock Text="Eredmény:" Background="Beige" Name="tbkEredmeny"/>
         </DockPanel>
+        <TextBlock Grid.Column="1"
+                  x:Name="tbkKerdesSzovege"/>
+        <StackPanel Grid.Column="1"
+                    Grid.Row="1">
+            <RadioButton GroupName="Valaszok"
+                         Name="ValaszA"
+                         Margin="3"
+                         Content="A)"/>
+            <RadioButton GroupName="Valaszok"
+                         Name="ValaszB"
+                         Margin="3"
+                         Content="B)"/>
+            <RadioButton GroupName="Valaszok"
+                         Name="ValaszC"
+                         Margin="3"
+                         Content="C)"/>
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Center">
+                <Button Content="Előző"
+                        Margin="5"
+                        Padding="5"
+                        Width="100"
+                        Click="ElozoClick"/>
+                <Button Content="Válasz mentése"
+                        Margin="5"
+                        Padding="5"
+                        Width="100"
+                        Click="ValaszMenteseClick"/>
+                <Button Content="Következő"
+                        Margin="5"
+                        Padding="5"
+                        Width="100"
+                        Click="KovetkezoClick"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
