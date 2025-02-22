@@ -32,6 +32,7 @@
                     Content="Kilépés"
                     Margin="5"
                     Click="KilepesClick"/>
+            <TextBlock Text="Eredmény:" Background="Beige" Name="tbkEredmeny"/>
         </DockPanel>
     </Grid>
 </Window>
