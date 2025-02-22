@@ -9,7 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="TestText\" />
+    <None Remove="TestText\valaszok.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="TestText\valaszok.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
