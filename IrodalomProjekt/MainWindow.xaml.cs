@@ -20,5 +20,24 @@ namespace IrodalomProjekt
         {
             InitializeComponent();
         }
+        private static void KerdeseketFeltolt(string fileName)
+        {
+
+        }
+
+        private void BetoltesClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void KiertekelesClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void KilepesClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

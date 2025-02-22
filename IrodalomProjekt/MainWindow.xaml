@@ -10,10 +10,28 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="59*"/>
             <RowDefinition Height="158*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="43*"/>
             <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Background="LightGray">
+            <Button DockPanel.Dock="Top"
+                    Content="Betöltés"
+                    Margin="5"
+                    Click="BetoltesClick"/>
+            <Button DockPanel.Dock="Top"
+                    Content="Kiértékelés"
+                    Margin="5"
+                    Click="KiertekelesClick"/>
+            <Button DockPanel.Dock="Bottom"
+                    Content="Kilépés"
+                    Margin="5"
+                    Click="KilepesClick"/>
+        </DockPanel>
     </Grid>
 </Window>
