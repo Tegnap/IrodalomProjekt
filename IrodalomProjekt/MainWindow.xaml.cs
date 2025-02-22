@@ -117,8 +117,18 @@ namespace IrodalomProjekt
         }
         private void KiertekelesClick(object sender, RoutedEventArgs e)
         {
+            if (kerdesek.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltött kérdések");
+                return;
+            }
 
+            int helyesValaszokSzama = kerdesek.Count(k => k.FelhasznaloValasza == k.HelyesValasz);
+            int osszesKerdes = kerdesek.Count;
+
+            MessageBox.Show($"Eredmény: {helyesValaszokSzama} / {osszesKerdes} helyes válasz");
         }
+
 
         private void KilepesClick(object sender, RoutedEventArgs e)
         {
